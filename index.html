@@ -35,7 +35,6 @@
   <!-- HEADER -->
   <div id="header_wrap" class="outer">
     <header class="inner">
-      <a id="forkme_banner" href="https://github.com/dwilhelm89/LeafletSlider">View on GitHub</a>
 
       <h1 id="project_title">Leaflet Time-Slider Example</h1>
 
@@ -56,7 +55,7 @@
     <script>
     var sliderControl = null;
 
-    var map = L.map('map').setView([51.9, 7.9], 9);
+    var map = L.map('map').setView([47.5, -99], 8);
 
     L.tileLayer('//{s}.tile.osm.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -70,7 +69,8 @@
       var sliderControl = L.control.sliderControl({
         position: "topright",
         layer: testlayer,
-        range: true
+          range: false,
+	  folow: 1
       });
 
       //Make sure to add the slider to the map ;-)
@@ -84,14 +84,6 @@
   </div>
 
   <!-- FOOTER  -->
-  <div id="footer_wrap" class="outer">
-    <footer class="inner">
-      <p class="copyright">Leafletslider maintained by <a href="https://github.com/dwilhelm89">dwilhelm89</a>
-      </p>
-      <p>Published with <a href="https://pages.github.com">GitHub Pages</a>
-      </p>
-    </footer>
-  </div>
 
 
 
